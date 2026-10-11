@@ -1,4 +1,4 @@
-# Rental
+# Rental v0.0.1
 
 To start your Phoenix server:
 
