@@ -11,7 +11,7 @@ defmodule Rental.MixProject do
       aliases: aliases(),
       deps: deps(),
       compilers: [:phoenix_live_view] ++ Mix.compilers(),
-      listeners: [Phoenix.CodeReloader],
+      listeners: [Phoenix.CodeReloader, Clarity.CodeReloader],
       consolidate_protocols: Mix.env() != :dev
     ]
   end
@@ -41,6 +41,7 @@ defmodule Rental.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
+      {:clarity, "~> 0.6"},
       {:sourceror, "~> 1.8", only: [:dev, :test]},
       {:ash_admin, "~> 1.0"},
       {:ash_postgres, "~> 2.0"},

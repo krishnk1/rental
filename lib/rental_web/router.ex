@@ -51,4 +51,14 @@ defmodule RentalWeb.Router do
       ash_admin "/"
     end
   end
+
+  if Application.compile_env(:rental, :dev_routes) do
+    import Clarity.Router
+
+    scope "/clarity" do
+      pipe_through :browser
+
+      clarity "/"
+    end
+  end
 end
